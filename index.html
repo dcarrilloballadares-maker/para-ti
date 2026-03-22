@@ -21,7 +21,12 @@ body {
     align-items: center;
 }
 
-/* CAJA BONITA */
+/* TÍTULO */
+h2 {
+    color: #78350f;
+}
+
+/* CAJA */
 .caja {
     width: 140px;
     height: 140px;
@@ -29,7 +34,7 @@ body {
     border-radius: 15px;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: transform 0.3s;
 }
 
@@ -42,7 +47,7 @@ body {
     position: absolute;
     width: 100%;
     height: 20px;
-    background: #fff;
+    background: white;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -52,7 +57,7 @@ body {
     position: absolute;
     width: 20px;
     height: 100%;
-    background: #fff;
+    background: white;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -60,8 +65,21 @@ body {
 /* RAMO */
 .ramo {
     display: none;
-    width: 260px;
+    width: 280px;
     margin-top: 20px;
+    animation: aparecer 1s ease;
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* MENSAJE */
@@ -70,6 +88,7 @@ body {
     margin-top: 20px;
     font-size: 20px;
     color: #78350f;
+    animation: aparecer 1.5s ease;
 }
 </style>
 </head>
@@ -88,13 +107,14 @@ body {
 <img src="ramo.png" class="ramo" id="ramo">
 
 <div class="mensaje" id="mensaje">
-💐 Para ti, Karla…<br>
+💐 Para ti, Karla…<br><br>
 No sabía cómo darte flores,<br>
 pero quería darte algo especial 💛
 </div>
 
 </div>
 
+<!-- MÚSICA -->
 <iframe id="musica" width="0" height="0"
 src="https://www.youtube.com/embed/nONFnjR5VFI?enablejsapi=1"
 frameborder="0" allow="autoplay"></iframe>
